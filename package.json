@@ -1,5 +1,5 @@
 {
-  "name": "astrobox-plugin-template",
+  "name": "astrobox-plugin-interconn-fetch",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -12,6 +12,6 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "astrobox-plugin-sdk": "^1.1.4"
+    "astrobox-plugin-sdk": "^1.1.6"
   }
 }

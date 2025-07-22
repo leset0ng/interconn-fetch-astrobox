@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       astrobox-plugin-sdk:
-        specifier: ^1.1.4
-        version: 1.1.4
+        specifier: ^1.1.5
+        version: 1.1.5
     devDependencies:
       '@rspack/cli':
         specifier: ^1.4.6
@@ -122,21 +122,25 @@ packages:
     resolution: {integrity: sha512-ZrrCn5b037ImZfZ3MShJrRw4d5M3Tq2rFJupr+SGMg7GTl2T6xEmo3ER/evHlT6e0ETi6tRWPxC9A1125jbSQA==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@rspack/binding-linux-arm64-musl@1.4.6':
     resolution: {integrity: sha512-0a30oR6ZmZrqmsOHQYrbZPCxAgnqAiqlbFozdhHs+Yu2bS7SDiLpdjMg0PHwLZT2+siiMWsLodFZlXRJE54oAQ==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@rspack/binding-linux-x64-gnu@1.4.6':
     resolution: {integrity: sha512-u6pq1aq7bX+NABVDDTOzH64KMj1KJn8fUWO+FaX7Kr7PBjhmxNRs4OaWZjbXEY6COhMYEJZ04h4DhY+lRzcKjA==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@rspack/binding-linux-x64-musl@1.4.6':
     resolution: {integrity: sha512-rjP/1dWKB828kzd4/QpDYNVasUAKDj0OeRJGh5L/RluSH3pEqhxm5FwvndpmFDv6m3iPekZ4IO26UrpGJmE9fw==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@rspack/binding-wasm32-wasi@1.4.6':
     resolution: {integrity: sha512-5M0g7TaWgCFQJr4NKYW2bTLbQJuAQIgZL7WmiDwotgscBJDQWJVBayFEsnM6PYX1Inmu6RNhQ44BKIYwwoSyYw==}
@@ -378,8 +382,8 @@ packages:
   array-flatten@1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==}
 
-  astrobox-plugin-sdk@1.1.4:
-    resolution: {integrity: sha512-FK1zva0aRsWLznC/Ey4x+06yv1Owiek0Ride7RUlgg2yEdesdZW5snyvaLyk0PvttH5NBJCRA4fBS3vTy/wS2A==}
+  astrobox-plugin-sdk@1.1.5:
+    resolution: {integrity: sha512-FhrP2CXVv7QYf3yziS4uY0oo7EFCKHL5uIZ2uXai13sikvtkgW+GfrDHcpOB52CeyDop2GLH3uDr9KFES/w6gg==}
 
   batch@0.6.1:
     resolution: {integrity: sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw==}
@@ -1806,7 +1810,7 @@ snapshots:
 
   array-flatten@1.1.1: {}
 
-  astrobox-plugin-sdk@1.1.4: {}
+  astrobox-plugin-sdk@1.1.5: {}
 
   batch@0.6.1: {}
 
