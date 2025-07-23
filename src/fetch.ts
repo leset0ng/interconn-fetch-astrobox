@@ -7,13 +7,18 @@ export default class FetchClient{
     constructor(interconn:InterHandshake) {
         this.conn = interconn;
         this.conn.addListener<FetchData>(FetchClient.name, async (data) => {
-            const normalizedOptions = {
-                raw: false,
-                ...data.options,
-                headers: normalizeHeaders(data.options.headers),
+            try {
+                if (!data.options) data.options = {}
+                const normalizedOptions = {
+                    raw: false,
+                    ...data.options,
+                    headers: normalizeHeaders(data.options.headers),
+                }
+                const resp = await AstroBox.network.fetch(data.url, normalizedOptions);
+                this.conn.send(FetchClient.name, { resp, id: data.id });
+            } catch (error) {
+                console.error(error);
             }
-            const resp = await AstroBox.network.fetch(data.url, normalizedOptions);
-            this.conn.send(FetchClient.name,{resp,id:data.id});
         })
     }
 }
@@ -21,8 +26,8 @@ export default class FetchClient{
 interface FetchData {
     url: string
     options: {
-        method: string,
-        headers: HeadersInit,
+        method?: string,
+        headers?: HeadersInit,
         body?: string
     }
     id:string

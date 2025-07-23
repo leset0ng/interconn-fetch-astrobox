@@ -1,8 +1,8 @@
 {
-    "name": "testplugin",
+    "name": "fetch",
     "icon": "icon.png",
     "version": "1.0",
-    "description": "测试插件",
+    "description": "fetch插件",
     "author": "test",
     "website": "no.thankyou",
     "entry": "main.js",
